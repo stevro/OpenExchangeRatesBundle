@@ -196,7 +196,7 @@ class Currencies
         $initialCurrenciesArray = self::CurrencyArray();
         $currarray = array();
         foreach ($initialCurrenciesArray as $key => $val) {
-            $currarray[$val[$key]] = $key;
+            $currarray[$key] = $key;
         }
         return $currarray;
     }
