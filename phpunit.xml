@@ -9,7 +9,7 @@
          processIsolation="false"
          stopOnFailure="false"
          syntaxCheck="false"
-         bootstrap="vendor/autoload.php"
+         bootstrap="../../../../../vendor/autoload.php"
         >
     <testsuites>
         <testsuite name="OpenExchangeRatesBundle Test Suite">
@@ -24,6 +24,6 @@
     </filter>
 
     <php>
-        <server name="KERNEL_DIR" value="./Tests/app/" />
+        <server name="KERNEL_DIR" value="/../../../../../app/" />
     </php>
 </phpunit>
