@@ -21,6 +21,7 @@ class CurrencyConverter
 {
 
     private $em;
+    private $exchangeRate = null;
 
     public function __construct(EntityManager $em)
     {
@@ -52,7 +53,11 @@ class CurrencyConverter
 
     public function convertAmount($amount, $from, $to)
     {
-        return $amount * $this->getExchangeRate($from, $to);
+        if(null === $this->exchangeRate){
+            $this->exchangeRate = $this->getExchangeRate($from, $to);
+        }
+
+        return $amount * $this->exchangeRate;
     }
 
 }
